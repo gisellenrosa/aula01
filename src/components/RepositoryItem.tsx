@@ -1,4 +1,6 @@
-export function RepositoryItem(props) {
+import { RepositoryItemProps } from '../types/types'
+
+export function RepositoryItem(props : RepositoryItemProps) {
   return (
     <li>
       <strong>{props.repository.name }</strong>

@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react";
 import { RepositoryItem } from "./RepositoryItem";
 import "../styles/repositories.scss";
+import { Repository} from "../types/types"
 
-// https://api.github.com/orgs/rocketseat/repos
+
 
 export function RepositoryList() {
-  const [repositories, setRepositories] = useState([]);
+
+  // uso o <RepositoryProps[]> Pra dizer que o meu useState é do tipo respository que é um array desse repository.
+
+  const [repositories, setRepositories] = useState<Repository[]>([]);
 
   // Disparo uma função quando algo acontecer na minha aplicação, por exemplo  amudança de uma variável
   // Recebe dois parametros 1. Qual função eu quero executar
